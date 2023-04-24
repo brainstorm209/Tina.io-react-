@@ -1,0 +1,52 @@
+# Tina.io website
+
+Source code for the [tina.io](https://tina.io) website.
+
+## Development
+
+```
+cp .env.example .env
+yarn install
+yarn dev
+```
+
+### Testing Local TinaCMS Changes
+
+If you have the **tinacms** repository cloned locally you can use it when running **tina.io**:
+
+```
+TINA=../path/to/tinacms yarn dev
+```
+
+You can also specify which packages you want to watch:
+
+```
+TINA=../path/to/tinacms TINA_WATCH=@tinacms/forms,react-tinacms-inline
+```
+
+> ### Warning
+>
+> This will only work for packages loaded by webpack. That means that environments which don't use
+> webpack (i.e. SSR builds) will not use this alias.
+
+## Copy-able Code Blocks
+
+A "Copy" button can be added to Code Blocks by adding the `copy` tag to fenced code blocks.
+
+Non-copyable JS
+
+```js
+const christmastPresent = new Banana()
+```
+
+Copyable JS
+
+```js,copy
+const christmastPresent = new Banana()
+```
+
+Copyable Text
+
+    ```copy
+    Hello World
+    ```
